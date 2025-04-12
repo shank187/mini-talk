@@ -6,24 +6,21 @@
 /*   By: aelbour <aelbour@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 18:04:12 by aelbour           #+#    #+#             */
-/*   Updated: 2025/04/11 11:05:42 by aelbour          ###   ########.fr       */
+/*   Updated: 2025/04/12 12:45:54 by aelbour          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "minitalk.h"
 
-int get_char_size(unsigned char c)
+size_t	ft_strlen(char *s)
 {
-	if ((c & 0x80) == 0x00)
-		return 1; 
-	else if ((c & 0xE0) == 0xC0)
-		return 2;
-	else if ((c & 0xF0) == 0xE0)
-		return 3;
-	else if ((c & 0xF8) == 0xF0)
-		return 4;
-	return -1;
-}
+	size_t	i;
 
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}
 
 void	ft_putstr_fd(char *s, int fd)
 {

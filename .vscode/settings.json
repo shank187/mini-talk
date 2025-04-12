@@ -1,6 +1,7 @@
 {
 	"files.associations": {
 		"minitalk.h": "c",
-		"string.h": "c"
+		"string.h": "c",
+		"minitalk_bonus.h": "c"
 	}
 }
